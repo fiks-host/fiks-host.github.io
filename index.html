@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KalTopUp Store</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- ICON -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+<style>
+body{
+    background:#0b0f1a;
+    color:white;
+    font-family:'Poppins',sans-serif;
+    scroll-behavior:smooth;
+}
+.navbar{
+    background:rgba(0,0,0,0.6);
+    backdrop-filter: blur(10px);
+}
+.section{padding:80px 0;}
+.hero{
+    padding:100px 0;
+    background:linear-gradient(120deg,#0f172a,#1e293b);
+    text-align:center;
+}
+.btn-topup{
+    background:linear-gradient(45deg,#4f46e5,#7c3aed);
+    border:none;
+    border-radius:10px;
+    padding:10px 25px;
+    color:white;
+}
+.game-card{
+    background:#111827;
+    border-radius:15px;
+    padding:20px;
+}
+.footer{
+    background:#020617;
+    padding:25px;
+    text-align:center;
+}
+
+/* BONUS HOVER */
+.btn-outline-light:hover{
+    background:#7c3aed;
+    border-color:#7c3aed;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+<div class="container">
+<a class="navbar-brand d-flex align-items-center" href="#">
+<img src="kaltopup.png" width="40" class="me-2">
+KalTopUp Store
+</a>
+
+<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="menu">
+<ul class="navbar-nav ms-auto">
+<li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+<li class="nav-item"><a href="#game" class="nav-link">Game</a></li>
+<li class="nav-item"><a href="#topupml" class="nav-link">Top Up</a></li>
+<li class="nav-item"><a href="#kontak" class="nav-link">Kontak</a></li>
+</ul>
+</div>
+</div>
+</nav>
+
+<!-- HOME -->
+<section id="home" class="hero">
+<div class="container">
+<h1>TopUp Cepat, Main Game Makin Semangat!</h1>
+<p>Mobile Legends & Free Fire</p>
+<a href="#topupml" class="btn btn-topup">Top Up Sekarang</a>
+</div>
+</section>
+
+<!-- GAME -->
+<section id="game" class="section">
+<div class="container">
+<h2 class="text-center mb-5">Pilih Game</h2>
+
+<div class="row">
+
+<div class="col-md-6 mb-4">
+<div class="game-card text-center">
+<img src="ml.jpeg" width="100" class="mb-3">
+<h4>Mobile Legends</h4>
+<a href="#topupml" class="btn btn-topup">Top Up</a>
+</div>
+</div>
+
+<div class="col-md-6 mb-4">
+<div class="game-card text-center">
+<img src="ff.jpeg" width="100" class="mb-3">
+<h4>Free Fire</h4>
+<a href="#topupff" class="btn btn-topup">Top Up</a>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- TOPUP ML -->
+<section id="topupml" class="section">
+<div class="container">
+<h2 class="text-center mb-5">Top Up Mobile Legends</h2>
+<!-- GAMBAR ML -->
+<div class="text-center mb-4">
+    <img src="ml.jpeg"
+         class="img-fluid rounded"
+         alt="Mobile Legends">
+</div>
+
+<div class="row">
+
+<div class="col-md-6">
+<div class="game-card">
+
+<input type="text" id="userID_ml" class="form-control mb-3" placeholder="User ID">
+<input type="text" id="serverID_ml" class="form-control mb-3" placeholder="Server ID">
+
+<select id="nominal_ml" class="form-control mb-3">
+<option>Pilih Nominal</option>
+<option>3 Diamond Rp 1k</option>
+<option>5 Diamond Rp 1.5k</option>
+<option>6 Diamond Rp 3k</option>
+<option>12 Diamond Rp 3.6k</option>
+<option>19 Diamond Rp 5.7k</option>
+<option>28 Diamond Rp 8.4k</option>
+<option>44 Diamond Rp 12.6k</option>
+<option>52 Diamond Rp 19.7k</option>
+<option>85 Diamond Rp 24.2k</option>
+<option>113 Diamoond Rp 40.7k</option>
+<option>125 Diamond Rp 45.3k</option>
+<option>169 Diamond Rp 65.8k</option>
+<option>198 Diamond Rp 70.9k</option>
+</select>
+
+<button id="btnBeli_ml" class="btn btn-topup w-100">Beli Sekarang</button>
+
+</div>
+</div>
+
+<div class="col-md-6">
+<div class="game-card">
+<h5>Metode Pembayaran</h5>
+
+<input type="radio" name="pay_ml"> Dana<br>
+<input type="radio" name="pay_ml"> OVO<br>
+<input type="radio" name="pay_ml"> Gopay
+
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- TOPUP FF -->
+<section id="topupff" class="section">
+<div class="container">
+<h2 class="text-center mb-5">Top Up Free Fire</h2>
+<!-- GAMBAR FF -->
+<div class="text-center mb-4">
+    <img src="ff.jpeg"
+         class="img-fluid rounded"
+         alt="Free Fire">
+</div>
+
+<div class="row">
+
+<div class="col-md-6">
+<div class="game-card">
+
+<input type="text" id="userID_ff" class="form-control mb-3" placeholder="User ID">
+
+<select id="nominal_ff" class="form-control mb-3">
+<option>Pilih Nominal</option>
+<option>5 Diamond Rp 1k</option>
+<option>12 Diamond Rp 2k</option>
+<option>29 Diamond Rp 5k</option>
+<option>50 Diamond Rp 8k</option>
+<option>70 Diamond Rp 10k</option>
+<option>140 Diamond Rp 20k</option>
+<option>210 Diamond Rp 30k</option>
+<option>280 Diamond Rp 40k</option>
+<option>255 Diamond Rp 50k</option>
+<option>425 Diamond Rp 60k</option>
+<option>495 Diamond Rp 70k</option>
+<option>565 Diamond Rp 80k</option>
+<option>635 Diamond Rp 90k</option>
+<option>720 Diamond Rp 100k</option>
+</select>
+
+<button id="btnBeli_ff" class="btn btn-topup w-100">Beli Sekarang</button>
+
+</div>
+</div>
+
+<div class="col-md-6">
+<div class="game-card">
+<h5>Metode Pembayaran</h5>
+
+<input type="radio" name="pay_ff"> Dana<br>
+<input type="radio" name="pay_ff"> OVO<br>
+<input type="radio" name="pay_ff"> Gopay
+
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- KONTAK -->
+<section id="kontak" class="section">
+<div class="container">
+<h2 class="text-center mb-5">Kontak Kami</h2>
+
+<div class="col-md-6 mx-auto">
+<input type="text" id="nama" class="form-control mb-3" placeholder="Nama">
+<input type="email" id="email" class="form-control mb-3" placeholder="Email">
+<textarea id="pesan" class="form-control mb-3" placeholder="Pesan"></textarea>
+
+<button id="btnKirim" class="btn btn-topup w-100">Kirim</button>
+
+<!-- KONTAK LANGSUNG -->
+<hr class="my-4">
+
+<h5 class="text-center">Atau hubungi langsung:</h5>
+
+<div class="text-center mt-3">
+
+<a href="https://instagram.com/my_fiks1?igsh=YmtnOG96cnl3ejlz" target="_blank" class="btn btn-outline-light m-1">
+<i class="fab fa-instagram"></i> Instagram
+</a>
+
+<a href="https://wa.me/6281241804529" target="_blank" class="btn btn-outline-light m-1">
+<i class="fab fa-whatsapp"></i> WhatsApp
+</a>
+
+<a href="mailto:taufikhidayatt24b@gmail.com" class="btn btn-outline-light m-1">
+<i class="fas fa-envelope"></i> Email
+</a>
+
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- MODAL -->
+<div class="modal fade" id="successModal">
+<div class="modal-dialog">
+<div class="modal-content bg-dark text-white text-center p-4">
+<h4>✅ Berhasil</h4>
+<p id="modalText"></p>
+<button class="btn btn-topup" data-bs-dismiss="modal">OK</button>
+</div>
+</div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+<p>© 2026 KalTopUp Store</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+// ML
+document.getElementById("btnBeli_ml").onclick = function(){
+let user = document.getElementById("userID_ml").value;
+let server = document.getElementById("serverID_ml").value;
+let nominal = document.getElementById("nominal_ml").value;
+let pay = document.querySelector('input[name="pay_ml"]:checked');
+
+if(user=="" || server=="" || nominal=="Pilih Nominal" || !pay){
+alert("Lengkapi data ML!");
+}else{
+document.getElementById("modalText").innerText="Top Up Mobile Legends berhasil!";
+new bootstrap.Modal(document.getElementById('successModal')).show();
+}
+}
+
+// FF
+document.getElementById("btnBeli_ff").onclick = function(){
+let user = document.getElementById("userID_ff").value;
+let nominal = document.getElementById("nominal_ff").value;
+let pay = document.querySelector('input[name="pay_ff"]:checked');
+
+if(user=="" || nominal=="Pilih Nominal" || !pay){
+alert("Lengkapi data FF!");
+}else{
+document.getElementById("modalText").innerText="Top Up Free Fire berhasil!";
+new bootstrap.Modal(document.getElementById('successModal')).show();
+}
+}
+
+// KONTAK
+document.getElementById("btnKirim").onclick = function(){
+let nama = document.getElementById("nama").value;
+let email = document.getElementById("email").value;
+let pesan = document.getElementById("pesan").value;
+
+if(nama=="" || email=="" || pesan==""){
+alert("Isi semua data!");
+}else{
+document.getElementById("modalText").innerText="Pesan akan diproses 1x24 jam.";
+new bootstrap.Modal(document.getElementById('successModal')).show();
+}
+}
+</script>
+
+</body>
+</html>
